@@ -1,0 +1,251 @@
+.how-it-works {
+  position: relative;
+  overflow: hidden;
+
+  background: linear-gradient(160deg, var(--blue-dark), var(--blue));
+
+  padding: 48px 24px 96px;
+
+  color: var(--white);
+
+  --section-title-color: var(--white);
+  --section-text-color: var(--white);
+
+  --section-eyebrow-color: var(--white);
+  --section-eyebrow-transform: uppercase;
+  --section-eyebrow-spacing: 0.1em;
+
+  --section-desc-width: 740px;
+}
+
+/* =========================================================
+   FONDO VERDE
+========================================================= */
+
+.how-it-works__shape {
+  position: absolute;
+
+  inset: 0;
+  z-index: 0;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+}
+
+.how-it-works__shape-fill {
+  fill: url(#hiw-green);
+}
+
+.how-it-works__shape-line {
+  fill: none;
+
+  stroke: var(--white);
+  stroke-width: 18;
+
+  vector-effect: non-scaling-stroke;
+}
+
+/* CONTENIDO */
+.how-it-works__inner {
+  position: relative;
+  z-index: 1;
+
+  max-width: var(--container);
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 40% 60%;
+  grid-template-rows: auto auto;
+
+  column-gap: 30px;
+
+  row-gap: 100px;
+}
+
+/* TÍTULO */
+.how-it-works__inner > app-section-title {
+  grid-column: 1 / -1;
+}
+
+/* IMAGEN */
+.how-it-works__figure {
+  margin: 0;
+
+  width: 100%;
+
+  /*
+   * Los margenes negativos suman 140 = 390 - 250: la caja de margen
+   * mide lo mismo que las tarjetas y la fila del grid no crece.
+   * 390 es el alto del PNG a 116%; 250, el alto de las tarjetas.
+   */
+  align-self: end;
+
+  /*
+   * Suman 150 = 390 - 240, el alto de las tarjetas, para que la fila
+   * no crezca. El reparto 66/84 deja el dibujo 45px por encima de las
+   * tarjetas y 67 por debajo, como en la referencia.
+   */
+  margin-top: -66px;
+  margin-bottom: -84px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.how-it-works__figure img {
+  /*
+   * El dibujo ocupa 1837 de los 2400px del archivo; el resto es margen
+   * transparente. A 116% de la columna el PNG mide 557px, con lo que el
+   * dibujo sale a los 426x350 del diseno.
+   */
+  width: 116%;
+  max-width: none;
+
+  /* Cancela el margen transparente izquierdo (280 de 2400) */
+  margin-left: -13.5%;
+
+  height: auto;
+  display: block;
+}
+
+/* TARJETAS */
+.steps {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  /* Referencia: tarjetas de ~203px con 57 de separacion */
+  gap: 56px;
+
+  /* Las tres con la misma altura y alineadas arriba */
+  align-items: stretch;
+}
+
+.step {
+  background: var(--white);
+
+  border-radius: var(--radius-xl);
+
+  /* Lateral estrecho: en la referencia el texto casi toca el borde */
+  padding: 20px 10px 24px;
+
+  min-height: 240px;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  gap: 14px;
+
+  box-sizing: border-box;
+
+  h3 {
+    color: var(--ink);
+    font-size: 1.15rem;
+    font-weight: 700;
+  }
+
+  p {
+    color: var(--ink);
+    font-size: 0.9rem;
+  }
+}
+
+/* =========================================================
+   CABECERA DE LA TARJETA: NÚMERO + ICONO
+========================================================= */
+
+.step__head {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  margin-bottom: 6px;
+}
+
+/* NÚMERO */
+.step__number {
+  color: var(--blue);
+
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-style: italic;
+  font-size: 2.5rem;
+
+  line-height: 1;
+}
+
+/* ICONO */
+.step__icon {
+  width: 60px;
+  height: 60px;
+
+  display: block;
+
+  color: var(--blue);
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 1100px) {
+
+  .how-it-works__inner {
+    grid-template-columns: 1fr;
+
+    row-gap: 40px;
+  }
+
+  .how-it-works__figure {
+    justify-content: center;
+
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+
+  .how-it-works__shape {
+    top: auto;
+    height: 55%;
+  }
+
+  .how-it-works__figure img {
+    max-width: 450px;
+  }
+
+  .steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+
+/* =========================
+   CELULAR
+   ========================= */
+
+@media (max-width: 700px) {
+
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .step {
+    min-height: auto;
+  }
+
+  .how-it-works__figure img {
+    max-width: 350px;
+  }
+
+}

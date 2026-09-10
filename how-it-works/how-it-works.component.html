@@ -1,0 +1,108 @@
+<section class="how-it-works" id="como-funciona">
+
+  <!-- ===================================================
+       FONDO VERDE CON CURVA BLANCA
+  ==================================================== -->
+
+  <svg
+    class="how-it-works__shape"
+    viewBox="0 0 1440 742"
+    preserveAspectRatio="none"
+    aria-hidden="true"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <defs>
+      <linearGradient id="hiw-green" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#c8ff20" />
+        <stop offset="0.6" stop-color="#a3e635" />
+      </linearGradient>
+    </defs>
+
+    <path
+      class="how-it-works__shape-fill"
+      d="M0,564 C60,470 200,400 432,386 C650,377 800,350 1008,319 C1150,285 1300,160 1440,37 L1440,800 L0,800 Z"
+    />
+
+    <path
+      class="how-it-works__shape-line"
+      d="M0,564 C60,470 200,400 432,386 C650,377 800,350 1008,319 C1150,285 1300,160 1440,37"
+    />
+  </svg>
+
+
+  <div class="how-it-works__inner">
+    <app-section-title
+      eyebrow="Cómo funciona"
+      title="Conectamos personas con ideas, comunidades y colaboradores"
+      description="Ofrecemos herramientas seguras, accesibles y transparentes para conectar proyectos con impacto tangible. Así lo vivimos cada día."
+      align="left"
+      [light]="true"
+    />
+
+    <figure class="how-it-works__figure">
+      <img
+        src="assets/images/hero/comofunciona.png"
+        alt="Esquema de cómo funciona WinWin Dream"
+        width="2400"
+        height="1682"
+        decoding="async"
+      />
+    </figure>
+
+    <div class="steps">
+      @for (step of steps; track step.id) {
+        <article class="step">
+
+          <div class="step__head">
+
+            <span class="step__number" aria-hidden="true">{{ step.step }}</span>
+
+            <svg
+              class="step__icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+
+              @switch (step.icon) {
+
+                @case ('idea') {
+                  <circle cx="12" cy="9.8" r="4.6" />
+                  <path d="M9.7 15.6h4.6M10.3 18h3.4M11.2 20.3h1.6" />
+                  <path d="M12 1.3v2.2M4.8 4.1l1.6 1.6M1.3 11.2h2.2M19.2 4.1l-1.6 1.6M22.7 11.2h-2.2" />
+                }
+
+                @case ('comunidad') {
+                  <circle cx="12" cy="6.9" r="2.9" fill="currentColor" stroke="none" />
+                  <path d="M7.3 17.6c0-2.6 2.1-4.7 4.7-4.7s4.7 2.1 4.7 4.7" />
+                  <circle cx="4.5" cy="9.7" r="2.2" fill="currentColor" stroke="none" />
+                  <path d="M1 18.2c0-2 1.6-3.7 3.5-3.7" />
+                  <circle cx="19.5" cy="9.7" r="2.2" fill="currentColor" stroke="none" />
+                  <path d="M23 18.2c0-2-1.6-3.7-3.5-3.7" />
+                }
+
+                @case ('impacto') {
+                  <circle cx="10.4" cy="12" r="7.6" />
+                  <path d="M10.4 7.3V12l3.3 2" />
+                  <path d="M19.5 9h3.2M20.3 12h2.4M19.5 15h3.2" />
+                }
+
+              }
+
+            </svg>
+
+          </div>
+
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.description }}</p>
+
+        </article>
+      }
+    </div>
+  </div>
+</section>
