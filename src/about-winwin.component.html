@@ -1,0 +1,202 @@
+<section class="about" id="nosotros">
+
+  <div class="about__inner">
+
+
+    <!-- ===================================================
+         PARTE SUPERIOR
+    ==================================================== -->
+
+    <div class="about__grid">
+
+
+      <!-- SOBRE WINWIN -->
+
+      <div class="about__col about__col--title">
+
+        <span class="about__eyebrow">
+          Sobre WinWin Dream
+        </span>
+
+        <div class="about__lead">
+
+          <span>
+            Transformamos ideas en
+          </span>
+
+          <em>
+            realidades
+          </em>
+
+        </div>
+
+      </div>
+
+
+      <!-- PROPÓSITO -->
+
+      <div class="about__col">
+
+        <h3>
+          Propósito
+        </h3>
+
+        <p>
+          Transformar las ideas en realidades, generando un ecosistema donde
+          cada proyecto tenga la oportunidad de crecer con apoyo comunitario
+          e inversión responsable.
+        </p>
+
+      </div>
+
+
+      <!-- MISIÓN -->
+
+      <div class="about__col">
+
+        <h3>
+          Misión
+        </h3>
+
+        <p>
+          Facilitar la conexión entre personas con ideas, comunidades y
+          pequeñas o grandes inversionistas, ofreciendo herramientas seguras,
+          accesibles y transparentes para financiar proyectos con impacto
+          tangible.
+        </p>
+
+      </div>
+
+
+      <!-- VISIÓN -->
+
+      <div class="about__col">
+
+        <h3>
+          Visión
+        </h3>
+
+        <p>
+          Ser la plataforma líder en comunidad solidaria en Latinoamérica,
+          reconocida por confianza, innovación y apoyo real a proyectos que
+          generan valor social, cultural y económico.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- ===================================================
+         GALERÍA INFERIOR
+    ==================================================== -->
+
+    <div class="about__gallery">
+
+
+      <!-- ================================================
+           MUÑECOS DETRÁS DE LAS ILUSTRACIONES
+      ================================================= -->
+
+      <div class="about__people" aria-hidden="true">
+
+  @for (person of people; track $index) {
+
+    <svg
+      class="about__person"
+      viewBox="13 0 74 100"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+
+      <circle
+        cx="50"
+        cy="10"
+        r="10"
+      />
+
+      <path
+        d="M50 25
+           C42 25 36 31 36 39
+           L36 62
+           L29 91
+           C28 96 31 99 35 99
+           C38 99 40 97 41 93
+           L48 68
+           L52 68
+           L59 93
+           C60 97 62 99 65 99
+           C69 99 72 96 71 91
+           L64 62
+           L64 39
+           C64 31 58 25 50 25Z"
+      />
+
+      <path
+        d="M39 34 L17 7"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="7"
+        stroke-linecap="round"
+      />
+
+      <path
+        d="M61 34 L83 7"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="7"
+        stroke-linecap="round"
+      />
+
+    </svg>
+
+  }
+
+</div>
+
+
+      <!-- ================================================
+           IMAGEN 1
+      ================================================= -->
+
+      <div class="about__image about__image--1">
+
+        <img
+          [src]="images[0].src"
+          [alt]="images[0].alt"
+        />
+
+      </div>
+
+
+      <!-- ================================================
+           IMAGEN 2
+      ================================================= -->
+
+      <div class="about__image about__image--2">
+
+        <img
+          [src]="images[1].src"
+          [alt]="images[1].alt"
+        />
+
+      </div>
+
+
+      <!-- ================================================
+           IMAGEN 3
+      ================================================= -->
+
+      <div class="about__image about__image--3">
+
+        <img
+          [src]="images[2].src"
+          [alt]="images[2].alt"
+        />
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

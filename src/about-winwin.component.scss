@@ -1,0 +1,557 @@
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about {
+  width: 100%;
+
+  background: var(--white);
+
+  padding: 70px 24px 95px;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   CONTENEDOR PRINCIPAL
+========================================================= */
+
+.about__inner {
+  width: 100%;
+
+  max-width: 1197px;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 48px;
+}
+
+
+/* =========================================================
+   PARTE SUPERIOR
+========================================================= */
+
+.about__grid {
+  width: 100%;
+  height: 225px;
+
+  display: grid;
+
+  grid-template-columns:
+    303px
+    238px
+    213px
+    233px;
+
+  column-gap: 70px;
+
+  align-items: flex-start;
+}
+
+
+/* =========================================================
+   COLUMNA PRINCIPAL
+========================================================= */
+
+.about__col--title {
+  width: 303px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 16px;
+}
+
+
+/* =========================================================
+   SOBRE WINWIN DREAM
+========================================================= */
+
+.about__eyebrow {
+  display: block;
+
+  width: 303px;
+  height: 30px;
+
+  color: #A3E635;
+
+  font-family: 'Cera Pro', sans-serif;
+
+  font-style: normal;
+  font-weight: 500;
+
+  font-size: 24px;
+  line-height: 30px;
+}
+
+
+/* =========================================================
+   TITULAR
+========================================================= */
+
+.about__lead {
+  width: 303px;
+  height: 150px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+
+
+/* "Transformamos ideas en" */
+
+.about__lead > span {
+  width: 303px;
+  height: 100px;
+
+  color: #0052CC;
+
+  font-family: 'Cera Pro', sans-serif;
+
+  font-style: normal;
+  font-weight: 400;
+
+  font-size: 40px;
+  line-height: 47px;
+}
+
+
+/* "realidades" */
+
+.about__lead em {
+  display: block;
+
+  width: 303px;
+  height: 50px;
+
+  color: transparent;
+
+  font-family: 'Cera Pro', sans-serif;
+
+  font-style: italic;
+  font-weight: 400;
+
+  font-size: 40px;
+  line-height: 50px;
+
+  -webkit-text-stroke: 2px #0052CC;
+}
+
+
+/* =========================================================
+   COLUMNAS PROPÓSITO / MISIÓN / VISIÓN
+========================================================= */
+
+.about__col:not(.about__col--title) {
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 16px;
+}
+
+
+/* Propósito */
+
+.about__col:nth-child(2) {
+  width: 238px;
+}
+
+
+/* Misión */
+
+.about__col:nth-child(3) {
+  width: 213px;
+}
+
+
+/* Visión */
+
+.about__col:nth-child(4) {
+  width: 233px;
+}
+
+
+/* =========================================================
+   TÍTULOS
+========================================================= */
+
+.about__col:not(.about__col--title) h3 {
+
+  margin: 0;
+
+  width: 109px;
+  height: 29px;
+
+  color: #A3E635;
+
+  font-family: 'Cera Pro', sans-serif;
+
+  font-style: normal;
+  font-weight: 700;
+
+  font-size: 24px;
+  line-height: 30px;
+}
+
+
+/* =========================================================
+   TEXTOS
+========================================================= */
+
+.about__col:not(.about__col--title) p {
+
+  margin: 0;
+
+  color: #0052CC;
+
+  font-family: 'Cera Pro', sans-serif;
+
+  font-style: normal;
+  font-weight: 400;
+
+  font-size: 16px;
+  line-height: 20px;
+}
+
+
+/* =========================================================
+   GALERÍA
+========================================================= */
+
+.about__gallery {
+  position: relative;
+
+  width: 100%;
+  height: 228.91px;
+
+  display: grid;
+
+  grid-template-columns:
+    398px
+    284px
+    315px;
+
+  column-gap: 100px;
+
+  align-items: center;
+
+  overflow: visible;
+
+  isolation: isolate;
+}
+
+
+/* =========================================================
+   MUÑECOS - ANCHO COMPLETO DE PANTALLA
+========================================================= */
+
+.about__people {
+  position: absolute;
+
+  left: 50%;
+
+
+  bottom: 45px;
+
+  width: 100vw;
+  height: 100px;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  gap: 14px;
+
+  z-index: 0;
+
+  pointer-events: none;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   PERSONA INDIVIDUAL
+========================================================= */
+
+.about__person {
+  flex: 0 0 74px;
+
+  width: 74px;
+  height: 100px;
+
+  display: block;
+
+  color: #B9B9B9;
+  fill: #B9B9B9;
+
+  opacity: 0.32;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   IMÁGENES
+========================================================= */
+
+.about__image {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+
+/* Imagen 1 */
+
+.about__image--1 {
+  width: 398px;
+  height: 205px;
+}
+
+
+/* Imagen 2 */
+
+.about__image--2 {
+  width: 284px;
+  height: 153px;
+}
+
+
+/* Imagen 3 */
+
+.about__image--3 {
+  width: 315px;
+  height: 228.91px;
+}
+
+
+/* Imágenes internas */
+
+.about__image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  object-position: center;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1250px) {
+
+  .about {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+
+  .about__inner {
+    max-width: 100%;
+  }
+
+
+  .about__grid {
+    grid-template-columns:
+      minmax(240px, 1.3fr)
+      minmax(190px, 1fr)
+      minmax(180px, 1fr)
+      minmax(190px, 1fr);
+
+    column-gap: 35px;
+  }
+
+
+  .about__col--title,
+  .about__lead,
+  .about__lead > span,
+  .about__lead em,
+  .about__eyebrow {
+    width: 100%;
+  }
+
+
+  .about__gallery {
+    grid-template-columns:
+      minmax(250px, 1.26fr)
+      minmax(200px, 0.9fr)
+      minmax(220px, 1fr);
+
+    column-gap: 50px;
+  }
+
+
+  .about__image--1,
+  .about__image--2,
+  .about__image--3 {
+    width: 100%;
+  }
+
+
+  /* Personas */
+
+  .about__people {
+    width: 100vw;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .about__grid {
+    height: auto;
+
+    grid-template-columns: 1fr 1fr;
+
+    row-gap: 40px;
+  }
+
+
+  .about__col--title,
+  .about__col:nth-child(2),
+  .about__col:nth-child(3),
+  .about__col:nth-child(4) {
+    width: 100%;
+  }
+
+
+  .about__gallery {
+    height: auto;
+
+    grid-template-columns: 1fr 1fr;
+
+    row-gap: 30px;
+  }
+
+
+  .about__image--1,
+  .about__image--2,
+  .about__image--3 {
+    width: 100%;
+    height: 180px;
+  }
+
+
+  /* Personas más pequeñas */
+
+  .about__people {
+    width: 100vw;
+    height: 88px;
+
+    gap: 12px;
+  }
+
+
+  .about__person {
+    flex-basis: 65px;
+
+    width: 65px;
+    height: 88px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .about {
+    padding: 50px 20px 70px;
+  }
+
+
+  .about__grid {
+    grid-template-columns: 1fr;
+
+    row-gap: 35px;
+  }
+
+
+  .about__lead > span {
+    font-size: 36px;
+    line-height: 43px;
+  }
+
+
+  .about__lead em {
+    font-size: 36px;
+    line-height: 45px;
+  }
+
+
+  .about__gallery {
+    grid-template-columns: 1fr;
+
+    row-gap: 25px;
+
+    height: auto;
+  }
+
+
+  .about__image--1,
+  .about__image--2,
+  .about__image--3 {
+    width: 100%;
+
+    height: auto;
+
+    min-height: 150px;
+  }
+
+
+  /* Personas */
+
+  .about__people {
+    width: 100vw;
+    height: 76px;
+
+    gap: 10px;
+
+    transform: translateX(-50%);
+  }
+
+
+  .about__person {
+    flex-basis: 56px;
+
+    width: 56px;
+    height: 76px;
+  }
+
+}
