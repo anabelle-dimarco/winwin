@@ -1,0 +1,163 @@
+<section class="contact" id="contacto">
+  <div class="contact__card">
+    <div class="contact__copy">
+      <span class="eyebrow">Da el primer paso</span>
+
+      <h2 class="contact__headline">
+        <span>Conecta.</span>
+        <span>Crece.</span>
+        <span class="contact__headline-accent">Impacta.</span>
+      </h2>
+
+      <p>Crea tu cuenta y sé parte de una comunidad que impulsa ideas, proyectos y sueños.</p>
+
+      <!-- ================================================
+           MUÑECOS DECORATIVOS
+      ================================================= -->
+
+      <div class="contact__people" aria-hidden="true">
+        @for (person of people; track $index) {
+          <svg class="contact__person" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="10" r="10" />
+
+            <path
+              d="M50 25
+                 C42 25 36 31 36 39
+                 L36 62
+                 L29 91
+                 C28 96 31 99 35 99
+                 C38 99 40 97 41 93
+                 L48 68
+                 L52 68
+                 L59 93
+                 C60 97 62 99 65 99
+                 C69 99 72 96 71 91
+                 L64 62
+                 L64 39
+                 C64 31 58 25 50 25Z"
+            />
+
+            <path
+              d="M39 34 L17 7"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="7"
+              stroke-linecap="round"
+            />
+
+            <path
+              d="M61 34 L83 7"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="7"
+              stroke-linecap="round"
+            />
+          </svg>
+        }
+      </div>
+    </div>
+
+    <form class="contact__form" [formGroup]="form" (ngSubmit)="submit()" novalidate>
+      <h3>Únete a WinWinDream</h3>
+      <p class="contact__form-desc">
+        Conecta con personas, proyectos y oportunidades que pueden hacer realidad grandes ideas.
+      </p>
+
+      <div class="field">
+        <label for="fullName">Nombre completo</label>
+        <input id="fullName" type="text" formControlName="fullName" placeholder="Tu nombre" />
+        @if (showError('fullName')) {
+          <span class="field__error">Ingresá tu nombre completo (mínimo 3 caracteres).</span>
+        }
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="email">Email</label>
+          <input
+            id="email"
+            type="email"
+            formControlName="email"
+            placeholder="tucorreo@outlook.com"
+          />
+          @if (showError('email')) {
+            <span class="field__error">Ingresá un correo válido.</span>
+          }
+        </div>
+
+        <div class="field">
+          <label for="phone">
+            Número
+            <span class="field__hint">(opcional)</span>
+          </label>
+          <div class="phone-group">
+            <input
+              id="phoneCode"
+              type="text"
+              formControlName="phoneCode"
+              placeholder="+34"
+              class="phone-code"
+              aria-label="Código de país"
+            />
+            <input
+              id="phone"
+              type="tel"
+              formControlName="phone"
+              placeholder="999 888 777"
+              class="phone-number"
+            />
+          </div>
+          @if (showError('phoneCode') || showError('phone')) {
+            <span class="field__error">Revisá el código de país y el número.</span>
+          }
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="topic">¿En qué podemos ayudarte?</label>
+        <input
+          id="topic"
+          type="text"
+          formControlName="topic"
+          placeholder="Quiero invertir en un proyecto"
+        />
+        @if (showError('topic')) {
+          <span class="field__error">Contanos brevemente qué estás buscando.</span>
+        }
+      </div>
+
+      <div class="field">
+        <label for="message">Mensaje</label>
+        <textarea
+          id="message"
+          rows="1"
+          formControlName="message"
+          placeholder="Contanos en qué podemos ayudarte ..."
+        ></textarea>
+        @if (showError('message')) {
+          <span class="field__error">Escribí un mensaje de al menos 10 caracteres.</span>
+        }
+      </div>
+
+      <button
+        type="submit"
+        class="btn btn--block contact__submit"
+        [disabled]="status() === 'sending'"
+      >
+        {{ status() === 'sending' ? 'Enviando...' : 'Enviar mensaje' }}
+      </button>
+
+      @if (feedback()) {
+        <p
+          class="contact__feedback"
+          [class.contact__feedback--error]="status() === 'error'"
+          role="status"
+        >
+          {{ feedback() }}
+        </p>
+      }
+
+      <p class="contact__legal">Al enviar tus datos, aceptas nuestra Política de Privacidad.</p>
+    </form>
+  </div>
+</section>
